@@ -207,8 +207,8 @@
   </dependencyManagement>
 
   <scm>
-    <connection>scm:git:git@github.com:jleetutorial/maven-project.git</connection>
-    <developerConnection>scm:git:git@github.com:jleetutorial/maven-project.git</developerConnection>
+    <connection>scm:git:git@github.com:vijaytammisetti/hellow-world.git</connection>
+    <developerConnection>scm:git:github.com/vijaytammisetti/hellow-world.git</developerConnection>
     <tag>HEAD</tag>
     <url>https://github.com/vijaytammisetti/hellow-world.git</url>
   </scm>
