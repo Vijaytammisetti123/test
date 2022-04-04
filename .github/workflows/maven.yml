@@ -23,4 +23,15 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean install
+  sonarQubeTrigger:
+    needs: build
+    name: SonarQube Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: SonarQube Scan
+      uses: kitabisa/sonarqube-action@v1.1.0
+      with:
+        host: ${{ secrets.SONARQUBE_HOST }}
+        login: ${{ secrets.SONARQUBE_TOKEN }}    
